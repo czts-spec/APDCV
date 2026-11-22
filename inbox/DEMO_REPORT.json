@@ -1,0 +1,21 @@
+{
+  "metrics": {
+    "train": {
+      "n_scalar_observations": 205,
+      "normalized_RMSE": 1.0758716140024351,
+      "fraction_abs_standardized_residual_le_2": 0.926829268292683
+    },
+    "validation": {
+      "n_scalar_observations": 205,
+      "normalized_RMSE": 1.0271921478863084,
+      "fraction_abs_standardized_residual_le_2": 0.9365853658536586
+    }
+  },
+  "parameters": {
+    "C0_F": 9.999999994907405e-10,
+    "G_S": 1.0337442957517752e-10,
+    "C1_F": 3.0003325485859903e-10,
+    "tau_s": 0.01200136276820377
+  },
+  "max_abs_energy_residual_J": 2.0938463836345147e-27
+}
