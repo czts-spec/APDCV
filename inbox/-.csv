@@ -1,0 +1,7 @@
+"Статья","Что добавляет"
+"“Using the Quasistatic Method for MOS Measurements,” Review of Scientific Instruments, vol. 44, no. 2, pp. 200–…, 1973","Практическая реализация QSCV-измерений и оценка точности около 1×10101 \times 10^{10}1×1010 states/cm²·eV вблизи midgap. pubs.aip"
+"Wagner and Berglund, “A Simplified Graphical Evaluation of High-Frequency and Quasistatic Capacitance–Voltage Curves,” Review of Scientific Instruments, vol. 43","Упрощённый графический способ совместного анализа HF- и QSCV-кривых для оценки параметров интерфейса. digitalcommons.njit"
+"“Measurement of the quasi-static C–V curves of an MIS structure in the presence of charge leakage,” Solid-State Electronics, 1985","Учёт утечек: важен, если ток утечки сравним с зарядным током при ramp. sciencedirect"
+"“Leakage current correction in quasi-static C–V measurements,” ICMTS 2004*","Три подхода к коррекции gate leakage; особенно полезно для тонких диэлектриков и высокоомных структур. ris.utwente"
+"“An improved technique for quasi-static C–V measurements”","Автоматизированный вариант: электрометр измеряет накопленный заряд Q(t)Q(t)Q(t) при малых шагах напряжения; CCC получают из QQQ-ttt-данных. inis.iaea"
+"“Determination of the absolute value of the semiconductor surface potential by the quasi-static capacitance–voltage characteristics of an MIS structure,” Semiconductors, 2003","Современный численный подход к определению ψs(Vg)\psi_s(V_g)ψs​(Vg​), VFBV_{FB}VFB​, распределения DitD_{it}Dit​ и вклада фиксированного заряда. link.springer"
