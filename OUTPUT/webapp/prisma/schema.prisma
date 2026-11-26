@@ -1,0 +1,52 @@
+// Prisma schema — QSCV B2910BL workbench
+// Паспорт прибора (§4), паспорт программы (§5), прогоны измерений (§7).
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+// Паспорт прибора и оснастки (методика §4)
+model InstrumentPassport {
+  id              String   @id @default(cuid())
+  model           String   // B2910BL
+  serialNumber    String   @default("")
+  firmware        String   @default("")
+  calibrationDate String   @default("") // ISO date
+  temperatureC    Float?   // температура опыта
+  warmupMinutes   Int      @default(60) // прогрев до self-cal (User's Guide)
+  selfCalDone     Boolean  @default(false) // *CAL?
+  selfTestDone    Boolean  @default(false) // *TST?
+  wiring          String   @default("4w") // 2w | 4w (:SENS:REM)
+  notes           String   @default("") // кабели, экран, guard, положение образца
+  updatedAt       DateTime @updatedAt
+}
+
+// Паспорт программы измерения (§5) — полный снимок MeasurementConfig в JSON
+model MeasurementConfig {
+  id        String   @id @default(cuid())
+  name      String
+  data      String // JSON MeasurementConfig + DutModel
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+// Прогон (run): полный результат последовательности в JSON (RunResult)
+model Run {
+  id         String   @id @default(cuid())
+  label      String
+  protocol   String // kuhn_staircase | aperture_charge
+  direction  String // forward | reverse
+  cycle      Int      @default(1)
+  stepsCount Int      @default(0)
+  stopped    Boolean  @default(false)
+  stopReason String?
+  configJson String // снимок MeasurementConfig
+  dutJson    String // снимок DutModel
+  resultJson String // полный RunResult
+  createdAt  DateTime @default(now())
+}
